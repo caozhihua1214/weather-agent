@@ -1,0 +1,12 @@
+{
+  "functions": {
+    "app/api/weather/route.ts": {
+      "maxDuration": 300
+    },
+    "app/api/weather/long-task/route.ts": {
+      "maxDuration": 300
+    }
+  },
+  "buildCommand": "npm run build",
+  "installCommand": "npm install"
+}
