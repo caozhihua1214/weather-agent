@@ -7,7 +7,7 @@ export async function callDoubao(messages: DoubaoMessage[]): Promise<string> {
   const response = await axios.post<DoubaoResponse>(
     'https://api.doubao.com/v1/chat/completions',
     {
-      model: 'doubao-3.5',
+      model: 'Doubao-seed-2.1-pro',
       messages,
       temperature: 0.7,
       max_tokens: 2048,
