@@ -70,7 +70,7 @@ export async function executeTask(taskId: string): Promise<void> {
   updateTask(taskId, { status: 'running' });
 
   try {
-    const { getWeatherFromDoubao } = await import('./doubao');
+    const { getWeatherFromZhiPu } = await import('./doubao');
 
     const location = task.location || '北京';
     
@@ -78,7 +78,7 @@ export async function executeTask(taskId: string): Promise<void> {
       throw new Error('无法识别位置');
     }
 
-    const weatherData = await getWeatherFromDoubao(location);
+    const weatherData = await getWeatherFromZhiPu(location);
     
     completeTask(taskId, { weather: weatherData, location });
   } catch (error) {
